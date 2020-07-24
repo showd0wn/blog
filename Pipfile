@@ -4,13 +4,14 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-rcssmin = "*"
-rjsmin = "*"
-django-compressor = "*"
-"calmjs.parse" = "*"
+flake8 = "*"
 
 [packages]
+"calmjs.parse" = "*"
 django = "==2.2.14"
+django-compressor = "*"
+rcssmin = "*"
+rjsmin = "*"
 
 [requires]
 python_version = "3.8"
