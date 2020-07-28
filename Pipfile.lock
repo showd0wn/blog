@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ffb1fa63baca9c762623052afe2ef1b98ee1c6d10383930fe1e6dd214d7e0496"
+            "sha256": "02cc715be99705a3d58238c5683f19ec3bb976ec36f1aafe565dd82ab6a6aa0d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -10,8 +10,8 @@
         "sources": [
             {
                 "name": "pypi",
-                "url": "http://mirrors.tools.huawei.com/pypi/simple",
-                "verify_ssl": false
+                "url": "http://mirrors.aliyun.com/pypi/simple",
+                "verify_ssl": true
             }
         ]
     },
