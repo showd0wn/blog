@@ -12,6 +12,7 @@ django = "==2.2.14"
 django-compressor = "*"
 rcssmin = "*"
 rjsmin = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"
