@@ -1,1 +1,1 @@
-pipenv run gunicorn blogproject.wsgi -k gthread
+pipenv run gunicorn blogproject.wsgi -w 2 -k gthread
