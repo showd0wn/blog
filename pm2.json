@@ -1,0 +1,14 @@
+{
+    "name": "blog",
+    "script": "./bin/gunicorn-start.sh",
+    "exec_interpreter": "bash",
+    "cwd": "./",
+    "instances": "max",
+    "log_date_format": "YYYY-MM-DD HH:mm Z",
+    "error_file": "./logs/app.err.log",
+    "out_file": "./logs/app.out.log",
+    "env": {
+        "DJANGO_SECRET_KEY": "",
+        "PORT": 8080
+    }
+}
