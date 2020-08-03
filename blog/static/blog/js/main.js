@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    $.goup({
-        locationOffset: 120,
-    });
+    // 回到顶部
+    $.goup({ containerColor: '#333' });
 });
