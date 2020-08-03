@@ -31,3 +31,23 @@ class Article(models.Model):
     tags = models.ManyToManyField(Tag, blank=True)
     # 文章浏览量
     views = models.PositiveIntegerField(default=0)
+
+
+class Menu(models.Model):
+    # 菜单名称
+    name = models.CharField(max_length=10, unique=True)
+    # 菜单地址
+    href = models.CharField(max_length=60)
+    # 菜单顺序
+    order = models.IntegerField()
+
+
+class Link(models.Model):
+    # 链接名称
+    name = models.CharField(max_length=10, unique=True)
+    # 链接地址
+    href = models.CharField(max_length=60)
+    # 链接图标（font-awesome class 名称）
+    icon = models.CharField(max_length=60)
+    # 链接顺序
+    order = models.IntegerField()

@@ -1,0 +1,38 @@
+<div class="menu">
+    <ul>
+    {% for menu in menu_list %}
+        <li>
+            <a href="{{ menu.href }}" title="{{ menu.name }}">{{ menu.name }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+
+<div class="link">
+    <ul>
+    {% for link in link_list %}
+        <li>
+            <a href="{{ link.href }}" title="{{ link.name }}" target="_blank" rel="external nofollow">
+                <i class="fa fa-{{link.icon}}"></i>
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+
+<p class="info">
+    <span class="copyright">
+        © 2020
+        <a href="/" title="Qingzhiyu">Qingzhiyu</a>
+    </span>
+    <a class="separator" href="/sitemap.xml" title="SiteMap" target="_blank" rel="nofollow">
+        <i class="fa fa-globe"></i>
+        SiteMap
+    </a>
+    <a class="separator" href="/atom.xml" title="RSS" target="_blank" rel="nofollow">
+        <i class="fa fa-rss"></i>
+        RSS
+    </a>
+    <br/>
+    <a href="http://beian.miit.gov.cn" target="_blank" rel="external nofollow">苏ICP备19003972号</a>
+</p>

@@ -1,0 +1,35 @@
+{% load static %}
+{% load compress %}
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>卿志宇的网络日志</title>
+    {% endblock %}
+    <link rel="shortcut icon" href="{% static 'blog/favicon.ico' %}">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    {% endcompress %}
+</head>
+<body>
+    <main>
+        <article>
+            <section></section>
+        </article>
+
+        <footer>
+            {% include 'blog/layout/footer.html' %}
+        </footer>
+    </main>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'blog/js/lib/jquery.goup.min.js' %}"></script>
+    {% compress js file main %}
+    <script src="{% static 'blog/js/main.js' %}"></script>
+    {% endcompress %}
+</body>
+</html>

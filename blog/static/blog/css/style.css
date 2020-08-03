@@ -2,7 +2,12 @@ html {
     box-sizing: border-box;
 }
 html a {
-    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+}
+html ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -18,8 +23,8 @@ body {
 
 main {
     margin: 0 auto;
-    padding: 18px 12px;
-    color: rgba(0, 0, 0, 0.65);
+    padding: 24px 12px;
+    color: #333;
     font-size: 14px;
     font-variant: tabular-nums;
     font-feature-settings: 'tnum';
@@ -28,32 +33,50 @@ main {
 article {
     background: #fff;
     box-shadow: 0 10px 20px 0 rgba(236,236,236,.86);
-    min-height: 200px;
+    min-height: 180vh;
 }
 
-footer .footer-inner {
+footer {
     text-align: center;
+    color: #666;
 }
-footer .separator-before::before {
+footer li {
+    display: inline-block;
+}
+footer a {
+    color: #666;
+}
+footer a:hover {
+   color: #333;
+}
+footer .menu ul {
+    margin: 60px 0 12px;
+    display: inline-block;
+    border-bottom: 1px solid;
+}
+footer .menu li {
+    padding: 0 10px 6px;
+}
+footer .link a {
+    font-size: 1.8em;
+    margin: 6px;
+}
+footer .info {
+    line-height: 1.8;
+    font-size: 12px;
+}
+footer .info .separator::before {
     content: "|";
 }
 
-footer p {
-    line-height: 1.8;
-    color: #a6a6a6;
-    font-size: 12px;
-}
-
-footer a {
-    color: #a6a6a6;
-    text-decoration: none;
-}
-footer a:hover {
-    color: #404142;
-}
-
 @media (min-width: 768px) {
-    main { max-width: 60vw; }
+    main {
+        max-width: 960px;
+        padding: 48px 12px;
+    }
+    footer .menu li {
+        padding: 0 20px 6px;
+    }
 }
 @media (max-width: 767px) {
     .hidden-phone {
