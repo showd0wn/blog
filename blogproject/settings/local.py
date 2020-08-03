@@ -10,6 +10,7 @@ SECRET_KEY = 'development-secret-key'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+COMPRESS_ENABLED = False
 
 
 ALLOWED_HOSTS = ['*']
