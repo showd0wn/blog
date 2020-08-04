@@ -1,0 +1,71 @@
+{% load static %}
+{% load compress %}
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>卿志宇的网络日志</title>
+    {% endblock %}
+    <link rel="shortcut icon" href="{% static 'blog/favicon.ico' %}">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'blog/css/common.css' %}">
+    {% block css %}
+    {% endblock %}
+    {% endcompress %}
+</head>
+<body>
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div class="menu">
+            <ul>
+            {% for menu in menu_list %}
+                <li>
+                    <a href="{{ menu.href }}" title="{{ menu.name }}">{{ menu.name }}</a>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+
+        <div class="link hidden-phone">
+            <ul>
+            {% for link in link_list %}
+                <li>
+                    <a href="{{ link.href }}" title="{{ link.name }}" target="_blank" rel="external nofollow">
+                        <i class="fa fa-{{link.icon}}"></i>
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+
+        <p class="info">
+            <span class="copyright">
+                © 2020
+                <a href="/">Qingzhiyu</a>
+            </span>
+            <span class="separator">
+                Powered by
+                <a href="https://www.djangoproject.com/" target="blank" rel="external nofollow">Django</a>
+            </span>
+            <br/>
+            <a href="http://beian.miit.gov.cn" target="_blank" rel="external nofollow">苏ICP备19003972号</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'blog/js/lib/jquery.goup.min.js' %}"></script>
+    {% compress js file main %}
+    <script src="{% static 'blog/js/main.js' %}"></script>
+    {% block js %}
+    {% endblock %}
+    {% endcompress %}
+</body>
+</html>

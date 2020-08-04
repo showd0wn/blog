@@ -1,1 +1,22 @@
-{% extends 'blog/layout/base.html' %}
+{% extends 'blog/layout.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'blog/css/index.css' %}">
+{% endblock %}
+
+{% block main %}
+<div class="header">
+    <div class="title">
+        <a href="/">卿志宇的网络日志</a>
+    </div>
+
+    <div class="tools hidden-phone">
+        <i class="fa fa-rss"></i>
+    </div>
+</div>
+
+<div class="content">
+
+</div>
+{% endblock %}

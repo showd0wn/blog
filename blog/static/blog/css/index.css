@@ -1,0 +1,38 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    height: calc(100vh - 146px);
+}
+
+.header {
+    height: 146px;
+    padding: 0 20%;
+    display: -webkit-flex;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; */
+}
+
+.title {
+    color: #515151;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    main {
+        height: calc(100vh - 98px);
+    }
+    .header {
+        height: 60px;
+    }
+    .title {
+        font-size: 18px;
+        line-height: 60px;
+        margin-left: 10%;
+    }
+}
