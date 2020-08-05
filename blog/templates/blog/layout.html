@@ -34,11 +34,11 @@
             </ul>
         </div>
 
-        <div class="link hidden-phone">
+        <div class="link">
             <ul>
             {% for link in link_list %}
                 <li>
-                    <a href="{{ link.href }}" title="{{ link.name }}" target="_blank" rel="external nofollow">
+                    <a href="{{ link.href }}" title="{{ link.name }}" target="_blank" rel="nofollow">
                         <i class="fa fa-{{link.icon}}"></i>
                     </a>
                 </li>

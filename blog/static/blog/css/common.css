@@ -13,6 +13,15 @@ html ul {
     padding: 0;
 }
 
+html button, input {
+    color: inherit;
+    outline: none;
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     min-height: 100vh;
     font-size: 14px;
@@ -67,10 +76,10 @@ footer .info .separator::before {
 
 @media (max-width: 767px) {
     footer {
-        padding: 6px 0;
+        padding: 6px 0 0;
     }
     footer .menu {
-        margin: 6px 0 12px;
+        margin: 6px 0;
     }
     footer .menu li {
         padding: 0 12px 6px;

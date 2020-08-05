@@ -29,7 +29,7 @@ class Article(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     # 文章标签
     tags = models.ManyToManyField(Tag, blank=True)
-    # 文章浏览量
+    # 文章阅读量
     views = models.PositiveIntegerField(default=0)
 
 
