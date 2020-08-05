@@ -28,7 +28,7 @@
             <ul>
             {% for menu in menu_list %}
                 <li>
-                    <a href="{{ menu.href }}" title="{{ menu.name }}">{{ menu.name }}</a>
+                    <a href="{{ menu.href }}" title="{{ menu.title }}">{{ menu.title }}</a>
                 </li>
             {% endfor %}
             </ul>
@@ -38,7 +38,7 @@
             <ul>
             {% for link in link_list %}
                 <li>
-                    <a href="{{ link.href }}" title="{{ link.name }}" target="_blank" rel="nofollow">
+                    <a href="{{ link.href }}" title="{{ link.title }}" target="_blank" rel="nofollow">
                         <i class="fa fa-{{link.icon}}"></i>
                     </a>
                 </li>

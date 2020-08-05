@@ -34,20 +34,29 @@ class Article(models.Model):
 
 
 class Menu(models.Model):
-    # 菜单名称
-    name = models.CharField(max_length=10, unique=True)
-    # 菜单地址
-    href = models.CharField(max_length=60)
-    # 菜单顺序
-    order = models.IntegerField()
+    title = models.CharField('标题', max_length=10, unique=True)
+    href = models.CharField('地址', max_length=60)
+    order = models.IntegerField('顺序')
+
+    class Meta:
+        ordering = ['order']
+        verbose_name = '菜单'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.title
 
 
 class Link(models.Model):
-    # 链接名称
-    name = models.CharField(max_length=10, unique=True)
-    # 链接地址
-    href = models.CharField(max_length=60)
-    # 链接图标（font-awesome class 名称）
-    icon = models.CharField(max_length=60)
-    # 链接顺序
-    order = models.IntegerField()
+    title = models.CharField('标题', max_length=10, unique=True)
+    href = models.CharField('地址', max_length=60)
+    icon = models.CharField('图标', max_length=60)
+    order = models.IntegerField('顺序')
+
+    class Meta:
+        ordering = ['order']
+        verbose_name = '链接'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.title
