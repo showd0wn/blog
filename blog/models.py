@@ -6,10 +6,18 @@ class Category(models.Model):
     # 类别名称
     name = models.CharField(max_length=10, unique=True)
 
+    class Meta:
+        verbose_name = '分类'
+        verbose_name_plural = verbose_name
+
 
 class Tag(models.Model):
     # 标签名称
     name = models.CharField(max_length=10, unique=True)
+
+    class Meta:
+        verbose_name = '标签'
+        verbose_name_plural = verbose_name
 
 
 class Article(models.Model):
@@ -31,6 +39,10 @@ class Article(models.Model):
     tags = models.ManyToManyField(Tag, blank=True)
     # 文章阅读量
     views = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        verbose_name = '文章'
+        verbose_name_plural = verbose_name
 
 
 class Menu(models.Model):

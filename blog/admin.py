@@ -1,5 +1,20 @@
 from django.contrib import admin
-from .models import Menu, Link
+from .models import Category, Tag, Article, Menu, Link
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+
+
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+
+
+@admin.register(Article)
+class ArticleAdmin(admin.ModelAdmin):
+    list_display = ('title', 'category', 'created_time', 'modified_time', 'author')
 
 
 @admin.register(Menu)
